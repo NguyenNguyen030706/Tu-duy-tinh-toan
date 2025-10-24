@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ede8e8;
+    color: #222;
+ 
+}
+
+.navbar {
+    background-color: #ffffff; 
+    width: 90%;
+    min-height: 15vh;
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/*-- == PHẦN 1 == -- */
+/* Left logo */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size:1.9rem;
+    color: #060908;
+}
+
+/* Nút bên phải */
+.nav-right { 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Nút chung */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* FOOD RECOMMENDER */
+.main-btn {
+    background-color: #324c41;
+    color: #fff;
+}
+
+/* ABOUT US */
+.secondary-btn {
+    background-color: #c9c9c9;
+    color: #131f1a;
+}
+
+/* Hover efect */
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+/* -- RESPONSIVE -- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}   
+
+/* -- == PHẦN 2 == -- */
+.main-section {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+    background-color: #324c41;
+    min-height: 580px;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+  
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    margin: 1.5rem auto 1.5rem auto; 
+    gap:1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #324c41; /* khoảng cách giữa các ô input */
+    border-radius: 40px;
+}
+
+.inputs input,
+.inputs select {
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* -- == MAP + RESULT == -- */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;   
+}
+
+.map {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1rem;
+    height: 400px;
+    min-height: initial;
+}
+
+.result {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    overflow-y:auto;
+    height: 100%;
+}
+
+.result h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.result ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result li {
+    background-color: #f6f6f6;
+    margin-bottom: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+}
+
+/* -- RESPONSIVE -- */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .map, .result {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .result {
+        margin-top: 1rem;
+    }
+}

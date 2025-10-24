@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recommender</title>
+  <link rel="stylesheet" href="style.css"/>
+ 
+</head>
+
+<body>
+    <!-- == NAVBAR (phần 1-nền trắng) ==-->
+     <header class="navbar">
+        <div class="nav-left">
+            <img src="./images/watermelon.png" alt="Logo" class="logo-icon">
+            <span class="logo-text">Travel Melon</span>
+        </div>
+
+        <nav class="nav-right">
+            <a href="#" class="btn main-btn">Food Recommender</a>
+            <a href="#" class="btn secondary-btn">About Us</a>
+        </nav>
+     </header>
+
+
+     <!-- == MAIN SECTION (phần 2 - nền xanh đậm) ==-->
+      <main class="main-section">
+        <div class="inputs">
+           <input type="text" id="start" placeholder="Your current address" />
+            <input type="text" id="end" placeholder="Your destination" />
+            <input type="number" placeholder="Your budget(USD)" aria-label="Your Budget in USD" name="budget">
+            <select>
+                <option>Diet Reference</option>
+                <option>Vegan</option>
+                <option>Vegetarian</option>
+                <option>Non-Vegetarian</option>
+            </select>
+        </div>
+
+
+        <!-- Bản đồ và danh sách-->
+         <div class="container">
+            <div class="map" id="map"></div>
+
+            <aside class="result">
+                <h3>Matched Restaurant</h3>
+                <ul>
+                     <li>Restaurant A — 0.4 km</li>
+                     <li>Restaurant B — 2.3 km</li>
+                     <li>Restaurant C — 3.1 km</li>
+                     <li>Restaurant D — 5.6 km</li>
+                     <li>Restaurant E — 5.6 km</li>
+                </ul>
+            </aside>
+         </div>    
+     </main>
+    <script src="script.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsAeTucVMXDPpwY6RCVM_JsfdZnXdQknM&callback=initMap">
+    </script>
+     
+</body>
+</html>
