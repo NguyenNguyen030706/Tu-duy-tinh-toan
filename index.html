@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Recommender</title>
-  <link rel="stylesheet" href="style.css"/>
- 
-</head>
+  
+  </head>
 
 <body>
-    <!-- == NAVBAR (phần 1-nền trắng) ==-->
-     <header class="navbar">
+    <header class="navbar">
         <div class="nav-left">
-            <img src="./images/watermelon.png" alt="Logo" class="logo-icon">
+            <img src="" alt="Logo" class="logo-icon">
             <span class="logo-text">Travel Melon</span>
         </div>
 
@@ -23,8 +21,7 @@
      </header>
 
 
-     <!-- == MAIN SECTION (phần 2 - nền xanh đậm) ==-->
-      <main class="main-section">
+     <main class="main-section">
         <div class="inputs">
            <input type="text" id="start" placeholder="Your current address" />
             <input type="text" id="end" placeholder="Your destination" />
@@ -38,8 +35,7 @@
         </div>
 
 
-        <!-- Bản đồ và danh sách-->
-         <div class="container">
+        <div class="container">
             <div class="map" id="map"></div>
 
             <aside class="result">
@@ -54,9 +50,9 @@
             </aside>
          </div>    
      </main>
-    <script src="script.js"></script>
+    
     <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsAeTucVMXDPpwY6RCVM_JsfdZnXdQknM&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_PLACEHOLDER&callback=initMap">
     </script>
      
 </body>
